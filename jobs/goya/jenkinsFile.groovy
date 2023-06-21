@@ -1,8 +1,3 @@
-properties([
-    parameters([
-        string(description: 'rama de ejecucion', name: 'rama')
-    ])
-])
 node ('database'){
     container('liquibase'){
         withCredentials([usernamePassword(credentialsId: 'user_liquibase', passwordVariable: 'pass', usernameVariable: 'user')]) {
