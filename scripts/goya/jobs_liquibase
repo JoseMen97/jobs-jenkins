@@ -1,9 +1,14 @@
-job('liquibase_dsl') {
-    scm {
-        git {
-            remote {
-                name('master')
-                url('https://github.com/JoseMen97/jobs-jenkins/blob/master/jobs/goya/jenkinsFile.groovy')
+pipelineJob('liquibase_dsl') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/JoseMen97/jobs-jenkins.git')
+                    }
+                    branch('master')
+                }
+                scriptPath('jobs/goya/jenkinsFile.groovy')
             }
         }
     }
