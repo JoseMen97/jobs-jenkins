@@ -6,6 +6,6 @@ scriptApproval.pendingScripts.each {
 }
 
 folder('proyect_liquibase') {
-    displayName('proyect_liquibase2')
+    displayName('proyect_liquibase')
     description('Folder for project Liquibase')
 }
