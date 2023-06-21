@@ -1,0 +1,10 @@
+job('liquibase_dsl') {
+    scm {
+        git {
+            remote {
+                name('master')
+                url('https://github.com/JoseMen97/jobs-jenkins/blob/master/jobs/goya/jenkinsFile.groovy')
+            }
+        }
+    }
+}
