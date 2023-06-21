@@ -1,4 +1,4 @@
-pipelineJob('liquibase_dsl') {
+pipelineJob('proyect_liquibase/liquibase_dsl') {
     definition {
         cpsScm {
             scm {
