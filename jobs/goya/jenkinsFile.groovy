@@ -1,6 +1,6 @@
 node ('database'){
     container('liquibase'){
-        withCredentials([usernamePassword(credentialsId: 'prueba', passwordVariable: 'pass', usernameVariable: 'user')]) {
+        withCredentials([usernamePassword(credentialsId: schema, passwordVariable: 'pass', usernameVariable: 'user')]) {
             stage('checkout'){
                 checkout(
                     [$class: 'GitSCM', branches: [[name: '*/'+env.rama]],
