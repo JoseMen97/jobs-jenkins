@@ -11,7 +11,11 @@ node ('database'){
                 id = 1
                 sh "mkdir changeLogs"
                 list.each{ sql ->
-                    sqlXml = sql.replace(".sql",".xml")
+                    if (sql.contains('.bdy')){
+                        sqlXml = sql.replace(".bdy",".xml")
+                    }else if (sql.contains('.spc')){
+                        sqlXml = sql.replace(".spc",".xml")
+                    }
                     sh "cp changelog_base.xml changeLogs/${sqlXml}"
                     sh """
                         sed -i '${linea} s/^/<include file="changeLogs\\/${sqlXml}"\\/>/' changelog.xml
