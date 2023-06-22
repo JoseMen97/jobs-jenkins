@@ -1,6 +1,7 @@
 pipelineJob('proyect_liquibase/liquibase_dsl') {
     parameters {
-        stringParam('rama', '', 'rama de ejecucion')
+        stringParam('rama', '', 'rama de ejecucion'),
+        stringParam('schema', '', 'rama de ejecucion')
     }
     definition {
         cpsScm {
