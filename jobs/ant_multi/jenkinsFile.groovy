@@ -3,8 +3,8 @@ pipeline{
 
     stages {
         stage ('checkout') {
-            container('ant'){
-                steps{
+            steps{
+                container('ant'){
                     checkout(
                         [$class: 'GitSCM', branches: [[name: '*/'+env.rama]],
                         userRemoteConfigs: [[url: 'https://github.com/JoseMen97/ant.git']]]
