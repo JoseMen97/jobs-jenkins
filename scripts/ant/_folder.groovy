@@ -9,8 +9,3 @@ folder('ant_multi') {
     displayName('ant_multi')
     description('Folder for project ant_multi')
 }
-
-ScriptApproval scriptApproval = ScriptApproval.get()
-scriptApproval.pendingScripts.each {
-    scriptApproval.approveScript(it.hash)
-}
