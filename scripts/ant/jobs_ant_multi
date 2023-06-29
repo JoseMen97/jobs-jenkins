@@ -35,9 +35,9 @@ pipelineJob('ant_multi/ant_multi_dsl') {
     }
     parameters {
         string {
-            name('payload')
+            name('rama')
             defaultValue('')
-            description('payload')
+            description('rama')
         }
     }
 }
