@@ -34,7 +34,7 @@ pipelineJob('ant_multi/ant_multi_dsl') {
         }
     }
     parameters {
-        wHideParameterDefinition {
+        string {
             name('payload')
             defaultValue('')
             description('payload')
